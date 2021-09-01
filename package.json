@@ -8,13 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
     "next": "^11.1.2",
+    "puppeteer-core": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/marked": "^1.1.0",
     "@types/node": "^16.7.10",
+    "@types/puppeteer-core": "^5.4.0",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/webpack-env": "^1.16.2",

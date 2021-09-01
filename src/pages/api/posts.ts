@@ -25,9 +25,15 @@ export async function getPostBySlug(slug: any) {
   const meta = matter(fileContent.default)
   const content = marked(meta.content)   
 
+  const baseURL = process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'https://thumbs-generator.vercel.app'
+  const thumbnailUrl = `${baseURL}/api/thumbnail.png?title=${meta.data.title}`
+
   return {
     title: meta.data.title, 
     description: meta.data.description, 
+    thumbnailUrl,
     content,
   }
 }
